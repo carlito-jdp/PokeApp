@@ -102,8 +102,8 @@ body {
 #pokedex {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  -ms-grid-columns: (minmax(calc(320px - 4em), 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(calc(320px - 4em), 1fr));
   -webkit-padding-start: 0;
           padding-inline-start: 0;
   grid-gap: 2rem;
