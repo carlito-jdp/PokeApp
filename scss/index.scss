@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "pokemon";
+    src: url("fonts/pokemon.woff2") format("woff2"),
+        url("fonts/pokemon.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: pokemon;
+    font-size: 62.5%;
+}
+body {
+    background-color: #ffcb05;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+.logo {
+    font-size: 2.2rem;
+    padding-top: 0.5em;
+}
+#search-pokedex {
+    padding: 2em;
+}
+#show-search {
+    max-width: 520px;
+    margin: 0 auto;
+}
+.form {
+    max-width: 520px;
+    position: relative;
+    font-family: pokemon;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 4.2em;
+    &__input {
+        font-family: pokemon;
+        flex-grow: 2;
+        border: 3px solid #f0f0f0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        outline: none;
+        padding: 0.8em 1.4em;
+    }
+    .form__input:hover,
+    .form__input:focus {
+        box-shadow: 0 6px 1px -2px#2a75bb;
+    }
+    &__submit {
+        font-family: pokemon;
+        font-size: 1.3rem;
+        background-color: #3c5aa6;
+        color: white;
+        cursor: pointer;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding: 0 1.3em;
+    }
+}
+#error-msg {
+    font-size: 1.2rem;
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: -35px;
+    color: #ce2029;
+}
+#pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding-inline-start: 0;
+    grid-gap: 2rem;
+    margin: 2em;
+}
+.card {
+    text-align: center;
+    list-style: none;
+    background-color: rgba(42, 117, 187, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 1.4em;
+    &__title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5em;
+    }
+    &:hover {
+        animation: bounce 2s infinite;
+    }
+}
+@keyframes bounce {
+    20% {
+        transform: translateY(-8px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+    80% {
+        transform: translateY(0px);
+    }
+}
