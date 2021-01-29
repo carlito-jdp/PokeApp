@@ -1,8 +1,8 @@
 const pokedex = document.getElementById('pokedex');
 const showSearch = document.getElementById('show-search');
 const errorMsg = document.getElementById('error-msg');
-const pokemonInput = document.getElementById("form__input");
-const submitForm = document.getElementById("form__submit");
+const pokemonInput = document.getElementById("search-pokemon-field");
+const submitForm = document.getElementById("submit-search");
 
 const fetchPokemon = async () => {
     const promises = [];
@@ -68,7 +68,7 @@ const searchPokemon = async name => {
 
 submitForm.addEventListener('click', e => {
     e.preventDefault();
-    const search = pokemonInput.value.trim();
+    const search = pokemonInput.value.toLowerCase().trim();
     if (search.length == 0 ) {
         errorMsg.style.display = "block";
         errorMsg.textContent = `Enter a pokemon here... Cannot be blank`
