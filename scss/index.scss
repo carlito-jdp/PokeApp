@@ -44,6 +44,7 @@ body {
     margin: 0 auto;
     margin-bottom: 4.2em;
     &__input {
+        width: 100%;
         font-family: pokemon;
         flex-grow: 2;
         border: 3px solid #f0f0f0;
